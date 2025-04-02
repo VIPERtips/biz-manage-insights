@@ -28,15 +28,7 @@ const Contact = () => {
         </Col>
       </Row>
 
-      <section className="social-media mt-5 text-center">
-        <h2>Follow Us</h2>
-        <p>
-          {/* Social media links */}
-          <a href="https://facebook.com/bizManageInsights" target="_blank" rel="noopener noreferrer" className="mx-2">Facebook</a> | 
-          <a href="https://twitter.com/bizManageInsights" target="_blank" rel="noopener noreferrer" className="mx-2">Twitter</a> | 
-          <a href="https://linkedin.com/bizManageInsights" target="_blank" rel="noopener noreferrer" className="mx-2">LinkedIn</a>
-        </p>
-      </section>
+      
     </Container>
   );
 };

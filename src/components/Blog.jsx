@@ -64,10 +64,23 @@ const Blog = ({ title = 'Blog' }) => {
         </div>
       ) : (
         <>
-          <Row className="g-4">
+          <Row className="g-4 align-items-stretch">
             {articles.map((article, index) => (
-              <Col xs={12} sm={6} md={4} key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
-                <motion.div whileHover={{ scale: 1.05 }} style={{ height: '100%' }}>
+              <Col 
+                xs={12} 
+                sm={6} 
+                md={4} 
+                key={index} 
+                data-aos="zoom-in" 
+                data-aos-delay={index * 50} // quicker transition delay
+              >
+                <motion.div 
+                  whileHover={{ 
+                    scale: 1.05, 
+                    transition: { duration: 0.2 } // faster hover transition
+                  }} 
+                  style={{ height: '100%' }}
+                >
                   <Card className="h-100 shadow-sm">
                     <Card.Img
                       variant="top"
@@ -76,19 +89,21 @@ const Blog = ({ title = 'Blog' }) => {
                       onError={(e) => {
                         e.target.src = placeholderImage;
                       }}
-                      style={{ height: '200px', objectFit: 'cover' }} // Fixed image height
+                      style={{ height: '200px', objectFit: 'cover' }}
                     />
-                    <Card.Body style={{ overflowY: 'auto' }}>
+                    <Card.Body className="d-flex flex-column" style={{ overflowY: 'auto' }}>
                       <Card.Title className="text-blue-700">{article.title}</Card.Title>
                       <Card.Text>{article.description}</Card.Text>
-                      <a
-                        href={article.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary"
-                      >
-                        Read more
-                      </a>
+                      <div className="mt-auto">
+                        <a
+                          href={article.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary"
+                        >
+                          Read more
+                        </a>
+                      </div>
                     </Card.Body>
                   </Card>
                 </motion.div>

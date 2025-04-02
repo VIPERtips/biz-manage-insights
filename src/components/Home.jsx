@@ -10,7 +10,10 @@ import {
   FaChartBar,
   FaBalanceScale,
   FaUsers,
-  FaCogs, FaBriefcase, FaIndustry, FaChartPie
+  FaCogs, 
+  FaBriefcase, 
+  FaIndustry, 
+  FaChartPie
 } from 'react-icons/fa';
 
 const Home = () => {
@@ -117,7 +120,7 @@ const Home = () => {
           style={{ zIndex: 0 }}
           alt="Business background"
         />
-        <Container className="position-relative" style={{ zIndex: 2 }}>
+        <Container className="position-relative p-5" style={{ zIndex: 2 }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -149,7 +152,7 @@ const Home = () => {
               className="d-flex gap-3 justify-content-center flex-wrap"
             >
               <Button
-              href='#about'
+                href='#about'
                 variant="primary" 
                 size="lg"
                 className="px-5 py-3 rounded-pill m-2"
@@ -170,14 +173,14 @@ const Home = () => {
 
       {/* Value Propositions */}
       <section className="py-7 bg-light" id="about">
-        <Container>
+        <Container className="px-5">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-6 mt-1"
           >
-            <h2 className="display-5 mb-4 text-dark" >
+            <h2 className="display-5 mb-4 text-dark">
               Why Choose BizManage Insights?
             </h2>
             <p className="lead text-secondary">
@@ -257,12 +260,12 @@ const Home = () => {
               ].map((item, index) => (
                 <Col md={6} lg={3} key={index}>
                   <motion.div 
-                   className="card h-100 shadow-sm border-0"
-                   initial={{ opacity: 0, y: 20 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-                   transition={{ delay: index * 0.1 }}
-                   whileHover={{ scale: 1.05 }}
+                    className="card h-100 shadow-sm border-0"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     <div className="card-body text-center p-4">
                       <div className="mb-3">{item.icon}</div>
@@ -279,7 +282,7 @@ const Home = () => {
 
       {/* Business Intelligence Section */}
       <section className="py-7 bg-dark">
-        <Container>
+        <Container className="px-5">
           <Row className="align-items-center">
             <Col lg={6} className="mb-5 mb-lg-0">
               <motion.div
@@ -328,7 +331,7 @@ const Home = () => {
                   <div className="text-light opacity-75 small mb-4">
                     Quarterly growth analysis (Sample Data)
                   </div>
-                  <div className="graph-container">
+                  <div className="graph-container p-3">
                     <Graph />
                   </div>
                 </div>
